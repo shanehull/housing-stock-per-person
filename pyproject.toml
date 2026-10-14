@@ -1,0 +1,15 @@
+[project]
+name = "housing-stock-per-person"
+version = "0.1.0"
+description = "Australian dwellings per person, 1955 to 2026, reconstructed from ABS building activity"
+requires-python = ">=3.11"
+dependencies = [
+    "matplotlib",
+    "openpyxl",
+    "pandas",
+]
+
+[dependency-groups]
+dev = [
+    "jupyterlab",
+]
