@@ -63,7 +63,6 @@ The second chart is the assumption made visible. The two demolition rates agree 
 
 - Levels before 2011-Q3 are estimates. The spread is roughly 25% at 1955, about 5% by 1990, and zero from 2011-Q3 where the ABS count begins.
 - One historic Census count, 1991 or 1996 for instance, would pin the demolition path and make the early series a fit rather than a guess. The ABS's older Census volumes hold those counts but they are PDFs, not data.
-- A rejected alternative: divide the ABS real (chain-volume) capital stock of dwellings by real capital per dwelling. That ratio is stable over 2012 to 2025, moving 0.9%, but it cannot be checked earlier, and it is the same undated assumption expressed in dollars rather than dwelling units.
 
 ## Files
 
