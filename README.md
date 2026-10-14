@@ -23,39 +23,16 @@ The question it answers is whether the housing stock has kept pace with the popu
 
 The stock per person climbed from 0.28 in 1955 to about 0.40 by 2000, then went broadly sideways for twenty years and has slipped since 2021. The floor column is the pessimistic end of the range, explained under assumptions.
 
-Dwellings per person is not the test of a shortage, because the unit that occupies a dwelling is a household. As the population ages and fragments, households per person rises, so dwellings per person must rise for the same housing service. The stock per person rose from 0.28 to 0.41, which is mostly fewer people per dwelling rather than more room each. The shortage test is dwellings per household, below.
-
-## Dwellings per household
-
-Households exist only at Censuses, so this is four points rather than a series. Against the dwelling series:
-
-| Census | Households | Average size | Dwellings  | Dwellings per household |
-| ------ | ---------- | ------------ | ---------- | ----------------------- |
-| 2006   | 7,144,096  | 2.572        | 8,352,201  | 1.169                   |
-| 2011   | 7,760,322  | 2.577        | 8,971,405  | 1.156                   |
-| 2016   | 8,286,077  | 2.589        | 9,774,500  | 1.180                   |
-| 2021   | 9,275,217  | 2.533        | 10,720,700 | 1.156                   |
-
-![Dwellings per household, 2006 to 2021](img/dwellings-per-household.png)
-
-The ratio sits between 1.156 and 1.180 with no trend. Over the fifteen years households grew 29.8% and dwellings grew 28.4%, so the stock tracked household formation almost exactly. On this measure the last two decades show neither a worsening shortage nor an improving surplus, and the rise in dwellings per person over the same window is entirely household fragmentation, which the stock met.
-
-The number above one is slack: the numerator is the whole dwelling stock, unoccupied dwellings included, while households are occupied dwellings. So roughly 14% of the stock is vacant, a second home, or otherwise unoccupied on a census night.
-
-What this does not show is the pre-2006 path. The ABS API carries households from 2006 only, so the decades where a squeeze would most plausibly hide are missing, and the older Census volumes are PDFs rather than data.
-
 ## Sources
 
 All free, keyless, no registration.
 
-| Series                          | ABS product                                | Coverage         |
-| ------------------------------- | ------------------------------------------ | ---------------- |
-| Number of residential dwellings | `RES_DWELL_ST`, measure 4, Australia       | 2011-Q3 onward   |
-| Dwelling units completed        | `BUILDING_ACTIVITY`, measure M7, Australia | 1955-Q1 onward   |
-| Population at June              | Historical population, 2021, HPDC1 Table 2 | 1901 to 2021     |
-| Population at June              | `ERP_Q`                                    | 1981 to 2026     |
-| Households                      | Census, `ABS_C16_T23_TS_SA`                | 2006, 2011, 2016 |
-| Households                      | Census, `C21_G35_SA2`                      | 2021             |
+| Series                          | ABS product                                | Coverage       |
+| ------------------------------- | ------------------------------------------ | -------------- |
+| Number of residential dwellings | `RES_DWELL_ST`, measure 4, Australia       | 2011-Q3 onward |
+| Dwelling units completed        | `BUILDING_ACTIVITY`, measure M7, Australia | 1955-Q1 onward |
+| Population at June              | Historical population, 2021, HPDC1 Table 2 | 1901 to 2021   |
+| Population at June              | `ERP_Q`                                    | 1981 to 2026   |
 
 ## Method
 
@@ -86,7 +63,6 @@ The second chart is the assumption made visible. The two demolition rates agree 
 
 - Levels before 2011-Q3 are estimates. The spread is roughly 25% at 1955, about 5% by 1990, and zero from 2011-Q3 where the ABS count begins.
 - One historic Census count, 1991 or 1996 for instance, would pin the demolition path and make the early series a fit rather than a guess. The ABS's older Census volumes hold those counts but they are PDFs, not data.
-- Dwellings per household is four Census points and the household counts come from a different kind of source than the dwelling series: the Census is a count on a night, while `RES_DWELL_ST` is an estimate. The 2006 and 2011 dwellings are backcast, so the flat line's endpoints are solid and its middle is estimated.
 - A rejected alternative: divide the ABS real (chain-volume) capital stock of dwellings by real capital per dwelling. That ratio is stable over 2012 to 2025, moving 0.9%, but it cannot be checked earlier, and it is the same undated assumption expressed in dollars rather than dwelling units.
 
 ## Files
@@ -94,7 +70,7 @@ The second chart is the assumption made visible. The two demolition rates agree 
 ```
 dwellings_per_person.ipynb   the analysis, runs end to end
 dwellings-per-person.csv     output, quarterly, 286 rows
-img/                         the three charts used above
+img/                         the two charts used above
 pyproject.toml               dependencies
 .python-version              interpreter pin
 ```
